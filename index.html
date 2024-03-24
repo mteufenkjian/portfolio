@@ -5,21 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vertical Image Gallery</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap">
+		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 <style>
-  body {
+	body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    margin: 0;
+    margin: auto;
     padding: 0;
-    background-color: #f0f0f0;
+		padding-left:200px;
+		padding-right:200px;
+    background-color: #e9e9e9;
+		
   }
-
+	.containerx{display:block;width:1100px;background-color:#f6f6f6;margin:auto;padding:60px;  border-radius: 20px;
+ margin-top:30px;margin-bottom:30px;}
   .title {
-    text-align: center;
-    font-family: 'Open Sans', sans-serif; /* Changed font to Open Sans */
-    font-size: 64px; /* Enlarged by 200% */
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif; /* Changed font to Open Sans */
+    font-size: 36px; /* Enlarged by 200% */
+	  font-weight:700;
     color: #000;
-    margin: 40px 0; /* Increased margin */
-    padding: 10px; /* Increased padding */
+    margin: 15px 0; /* Increased margin */
   }
 
   .gallery-container {
@@ -79,14 +88,68 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+	
+	.pn {
+  padding-bottom: 10px;
+}
+.pm {
+  padding-top: 24px;
+}
+.pl {
+  margin-bottom: 14px;
+}
+.pk {
+  margin-top: 32px;
+}
+.ca {
+  justify-content: center;
+}
+.ab {
+  display: flex;
+}
+	.pr {
+  margin-right: 20px;
+}
+.pq {
+  width: 3px;
+}
+.pp {
+  height: 3px;
+}
+.po {
+  background-color: rgb(0, 0, 0);
+}
+.bx {
+  border-radius: 50%;
+}
+.bl {
+  display: inline-block;
+}
 </style>
 </head>
 <body>
-
+	<div class="containerx">
 <div class="title">
-  Doheny.org
+  Website Redesign of Doheny.org
 </div>
+	<div class="ab ca pk pl pm pn" role="separator"><span class="po bx bl pp pq pr"></span><span class="po bx bl pp pq pr"></span><span class="po bx bl pp pq"></span></div>
+<span style="font-size:24px;font-weight:600;color:rgb(36, 36, 36);font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;">Before / After Comparison</span><br/><br/>
+	<span style="font-size:20px;text-align:left;line-height:32px;color:rgb(36, 36, 36)!important;font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;">The aim of the redesign was beyond surface changes, prioritizing functionality, seamless responsiveness, intuitive navigation, robust SEO, and user-centric design for a clean, modern browsing experience.</span><br/><br/>
+<figure class="cd-image-container">
+		<img src="HA.png" alt="Original Image">
+		<span class="cd-image-label" data-type="original">Original</span>
 
+		<div class="cd-resize-img"> <!-- the resizable image on top -->
+			<img src="HB.png" alt="Modified Image">
+			<span class="cd-image-label" data-type="modified">Modified</span>
+		</div>
+
+		<span class="cd-handle"></span>
+	</figure><!-- cd-image-container -->
+<br/><br/><br/><br/>
+		<div class="ab ca pk pl pm pn" role="separator"><span class="po bx bl pp pq pr"></span><span class="po bx bl pp pq pr"></span><span class="po bx bl pp pq"></span></div>
+<span style="font-size:24px;font-weight:600;color:rgb(36, 36, 36);font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;">Gallery</span><br/><br/>
+	<span style="font-size:20px;text-align:left;line-height:32px;color:rgb(36, 36, 36)!important;font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;">Explore the design in further detail, spanning multiple pages for a comprehensive view.</span><br/>
 <div class="gallery-container">
   <div class="thumbnails">
     <img src="https://raw.githubusercontent.com/mteufenkjian/portfolio/main/Thumb1.png" onclick="changeImage('https://raw.githubusercontent.com/mteufenkjian/portfolio/main/Home.png')" alt="Home">
@@ -107,6 +170,9 @@
     document.getElementById('mainImage').src = image;
   }
 </script>
-
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</div>
 </body>
 </html>
